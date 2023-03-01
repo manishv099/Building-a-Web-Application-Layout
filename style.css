@@ -1,0 +1,74 @@
+/* This will be a 2D layout so we need css grid */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  color: #343a40;
+  font-size: 24px;
+  height: 100vh;
+  text-align: center;
+  font-weight: bold;
+  /* Parent container is body so this will be our grid container */
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr;
+}
+nav,
+section,
+aside {
+  padding: 24px;
+}
+nav {
+  background-color: #343a40;
+  color: white;
+  grid-row: 1/-1;
+}
+menu {
+  background-color: violet;
+  color: white;
+  grid-column: 2/-1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px;
+}
+aside {
+  background-color: #e9ecef;
+}
+section {
+  background-color: #e9ecef;
+  padding: 40px;
+  /* How Element that dont fit in the container appear  */
+
+  overflow: scroll;
+
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+.email {
+  background-color: #adb5bd;
+  height: 96px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  font-size: 16px;
+  background-color: #5f3dc4;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 8px 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+button:last-child {
+  background-color: #d6336c;
+  margin-left: auto;
+}
